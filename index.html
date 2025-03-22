@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+  <script src="script.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>정 주 원 Portfolio</title>
@@ -12,7 +13,7 @@
     (function() {
       if (localStorage.getItem('openModal') === 'true') {
         // 모달을 강제로 display:block 하도록 스타일 삽입
-        document.write('<style>#modal-ai-sw { display: block !important; }</style>');
+        document.write('<style>#modal-ai-sw { display: block; }</style>');
         // 플래그 제거 (중복 실행 방지)
         localStorage.removeItem('openModal');
       }
