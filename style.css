@@ -842,9 +842,9 @@ footer {
   }
   .button-group {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column; /* 버튼들을 세로로 배치할 경우 */
+    align-items: center;    /* 중앙 정렬 */
+    gap: 10px;              /* 버튼 사이 간격 */
   }
 }
 
