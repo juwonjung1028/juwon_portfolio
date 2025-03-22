@@ -208,10 +208,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   
     // 모달 외부 터치 시 닫기 (모바일)
-    window.addEventListener("touchend", function(e) {
-      document.querySelectorAll(".modal").forEach(function(modal) {
-        if (e.target === modal) {
-          modal.style.display = "none";
+    document.querySelectorAll(".modal-content").forEach(function(content) {
+      content.addEventListener("click", function(e) {
+        e.stopPropagation();
         }
       });
     });
