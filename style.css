@@ -45,6 +45,8 @@ header.scrolled {
 
 .logo img {
   max-height: 50px; /* 필요에 따라 조절 */
+  display: block;     /* 인라인 요소 특성 제거 */
+  margin: 0 auto;     /* 수평 중앙 정렬 */
 }
 
 .logo a {
