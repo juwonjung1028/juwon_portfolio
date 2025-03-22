@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
   let adminLoggedIn = false;
   let unsubscribe = null; // 실시간 구독을 위한 변수
 
-  // **모바일 여부 판단: 터치 이벤트가 지원되면 true**
-  const isTouchDevice = 'ontouchstart' in window;
-
   // 부드러운 스크롤 기능
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function(e) {
@@ -57,22 +54,18 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 
       header.addEventListener('mouseover', function() {
-          // **터치 장치에서는 툴팁 이벤트 동작하지 않도록**
-          if (isTouchDevice) return;
           const content = this.nextElementSibling;
           tooltipDiv.textContent = (content.style.display === 'block') ? '접기' : '펼쳐보기';
           tooltipDiv.style.display = 'block';
       });
 
       header.addEventListener('mousemove', function(e) {
-          if (isTouchDevice) return; // **업데이트: 터치 장치에서는 mousemove 이벤트 무시**
           const offset = 10;
           tooltipDiv.style.left = (e.pageX + offset) + 'px';
           tooltipDiv.style.top = (e.pageY + offset) + 'px';
       });
 
       header.addEventListener('mouseout', function() {
-          if (isTouchDevice) return; // **업데이트: 터치 장치에서는 mouseout 이벤트 무시**
           tooltipDiv.style.display = 'none';
       });
   });
@@ -80,18 +73,15 @@ document.addEventListener("DOMContentLoaded", function() {
   // Hash-links 툴팁
   document.querySelectorAll('.hash-link').forEach(link => {
       link.addEventListener('mouseover', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.textContent = '포트폴리오 둘러보기';
           tooltipDiv.style.display = 'block';
       });
       link.addEventListener('mousemove', function(e) {
-          if (isTouchDevice) return; // **업데이트**
           const offset = 10;
           tooltipDiv.style.left = (e.pageX + offset) + 'px';
           tooltipDiv.style.top = (e.pageY + offset) + 'px';
       });
       link.addEventListener('mouseout', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.style.display = 'none';
       });
   });
@@ -99,18 +89,15 @@ document.addEventListener("DOMContentLoaded", function() {
   // 프로젝트 카드 툴팁
   document.querySelectorAll('.project-card a').forEach(card => {
       card.addEventListener('mouseover', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.textContent = '자세히 보기';
           tooltipDiv.style.display = 'block';
       });
       card.addEventListener('mousemove', function(e) {
-          if (isTouchDevice) return; // **업데이트**
           const offset = 10;
           tooltipDiv.style.left = (e.pageX + offset) + 'px';
           tooltipDiv.style.top = (e.pageY + offset) + 'px';
       });
       card.addEventListener('mouseout', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.style.display = 'none';
       });
   });
@@ -118,18 +105,15 @@ document.addEventListener("DOMContentLoaded", function() {
   // 이메일 및 버튼 툴팁
   document.querySelectorAll('.github-btn, .linkedin-btn').forEach(el => {
       el.addEventListener('mouseover', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.textContent = this.getAttribute('data-tooltip') || '이동하기';
           tooltipDiv.style.display = 'block';
       });
       el.addEventListener('mousemove', function(e) {
-          if (isTouchDevice) return; // **업데이트**
           const offset = 10;
           tooltipDiv.style.left = (e.pageX + offset) + 'px';
           tooltipDiv.style.top = (e.pageY + offset) + 'px';
       });
       el.addEventListener('mouseout', function() {
-          if (isTouchDevice) return; // **업데이트**
           tooltipDiv.style.display = 'none';
       });
   });
@@ -270,15 +254,5 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           alert("잘못된 비밀번호입니다.");
       }
-  });
-
-  // **터치 시작 시 툴팁 숨기기 (모바일용)**
-  document.addEventListener('touchstart', function() {
-      tooltipDiv.style.display = 'none';
-  });
-
-  // **터치 종료 시 툴팁 숨기기 (모바일용)**
-  document.addEventListener('touchend', function() {
-      tooltipDiv.style.display = 'none';
   });
 });
