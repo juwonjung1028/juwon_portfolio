@@ -207,6 +207,15 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
+    // 모달 외부 터치 시 닫기 (모바일)
+    window.addEventListener("touchend", function(e) {
+      document.querySelectorAll(".modal").forEach(function(modal) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  
     // =====================
     // 14) 문의 폼 제출 (Firestore에 문의 내용 저장)
     // =====================
