@@ -205,6 +205,12 @@ section h2 {
   color: #fff;                /* 글자색 흰색으로 */
 }
 
+.hash-link:active {
+  background-color: #f39c12;
+  color: #fff;
+  transition: none;
+}
+
 
 /* Projects 섹션 */
 #projects {
@@ -763,7 +769,7 @@ footer {
     bottom: auto;     /* 하단 고정 제거 */
     z-index: 999;     /* 다른 요소 위에 표시 */
   }
-  
+
   .menu-toggle {
     position: absolute;
     right: 15px; /* 원하는 오른쪽 간격 (필요 시 0으로 조정 가능) */
