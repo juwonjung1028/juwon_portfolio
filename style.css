@@ -211,6 +211,13 @@ section h2 {
   transition: none;
 }
 
+/* tap 하이라이트 제거 (모바일 전용) */
+.hash-link,
+.github-btn,
+.project-card a,
+.linkedin-btn {
+  -webkit-tap-highlight-color: transparent;
+}  
 
 /* Projects 섹션 */
 #projects {

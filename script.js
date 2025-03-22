@@ -203,6 +203,8 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".modal").forEach(function(modal) {
             if (e.target === modal) {
                 modal.style.display = "none";
+                e.preventDefault();          /* UPDATED */
+                e.stopPropagation();         /* UPDATED */
             }
         });
     });
@@ -212,6 +214,8 @@ document.addEventListener("DOMContentLoaded", function() {
       document.querySelectorAll(".modal").forEach(function(modal) {
         if (e.target === modal) {
           modal.style.display = "none";
+          e.preventDefault();          /* UPDATED */
+          e.stopPropagation();         /* UPDATED */
         }
       });
     });
@@ -219,6 +223,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // 모달 내부 클릭 시 이벤트 전파 막기
     document.querySelectorAll(".modal-content").forEach(function(content) {
       content.addEventListener("click", function(e) {
+        e.stopPropagation();
+      });
+      content.addEventListener("touchend", function(e) {   /* UPDATED: 터치 이벤트 추가 */
         e.stopPropagation();
       });
     });
