@@ -7,6 +7,18 @@
   <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script>
+    (function() {
+      if (localStorage.getItem('openModal') === 'true') {
+        // 모달을 강제로 display:block 하도록 스타일 삽입
+        document.write('<style>#modal-ai-sw { display: block !important; }</style>');
+        // 플래그 제거 (중복 실행 방지)
+        localStorage.removeItem('openModal');
+      }
+    })();
+  </script>
+
   <!-- Firebase SDK (Firestore 사용) -->
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
@@ -393,7 +405,7 @@
         <label for="email">이메일:</label>
         <input type="email" id="email" name="email" placeholder="이메일을 입력하세요" required>
         
-        <label for="subj5ect">제목:</label>
+        <label for="subject">제목:</label>
         <input type="text" id="subject" name="subject" placeholder="문의 제목을 입력하세요" required>
         
         <label for="message">문의 내용:</label>
@@ -419,9 +431,6 @@
       <button id="admin-login-btn" class="admin-btn">Admin Management</button>
     </div>
   </footer>
-
-  <script src="script.js"></script>
-
 
   <!-- Modal Popup for GPT Security AI Solution -->
   <div id="modal-gpt" class="modal">

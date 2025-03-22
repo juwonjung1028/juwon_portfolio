@@ -782,6 +782,19 @@ footer {
   .menu-toggle {
     display: flex;
   }
+
+  .custom-tooltip {
+    display: none !important;
+  }
+
+  .contact-details {
+    text-align: center; /* 전체 컨테이너를 가운데에 배치 */
+  }
+  .contact-details p {
+    display: inline-block; /* 각 줄이 글자 너비만큼만 차지 */
+    text-align: left;      /* 내부 텍스트는 왼쪽 정렬 */
+    margin: 5px 0;         /* 줄 간격 조금 부여 (선택) */
+  }
 }
 
 @media (max-width: 480px) {
@@ -793,8 +806,3 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
-  .custom-tooltip {
-      display: none !important;
-  }
-}

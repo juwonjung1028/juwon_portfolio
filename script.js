@@ -16,7 +16,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let adminLoggedIn = false;
     let unsubscribe = null; // 실시간 구독을 위한 변수
   
-    // 부드러운 스크롤 기능
+    // =====================
+    // 1) 부드러운 스크롤 기능
+    // =====================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function(e) {
             e.preventDefault();
@@ -31,46 +33,50 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 모바일 메뉴 토글 기능
+    // =====================
+    // 2) 모바일 메뉴 토글
+    // =====================
     const menuToggle = document.getElementById("mobile-menu");
     menuToggle.addEventListener("click", function() {
         const navMenu = document.querySelector("nav ul");
         navMenu.classList.toggle("active");
     });
   
-    // 전역 툴팁 div 생성
+    // =====================
+    // 3) 전역 툴팁 div 생성
+    // =====================
     const tooltipDiv = document.createElement('div');
     tooltipDiv.classList.add('custom-tooltip');
     document.body.appendChild(tooltipDiv);
   
-    // 아코디언 기능 및 툴팁 처리
+    // =====================
+    // 4) 아코디언 기능 + 툴팁 처리
+    // =====================
     const accordionHeaders = document.querySelectorAll(".accordion-header");
-  
     accordionHeaders.forEach(header => {
         header.addEventListener("click", function() {
             const content = this.nextElementSibling;
             content.style.display = (content.style.display === 'block') ? 'none' : 'block';
             tooltipDiv.textContent = (content.style.display === 'block') ? '접기' : '펼쳐보기';
         });
-  
         header.addEventListener('mouseover', function() {
             const content = this.nextElementSibling;
             tooltipDiv.textContent = (content.style.display === 'block') ? '접기' : '펼쳐보기';
             tooltipDiv.style.display = 'block';
         });
-  
         header.addEventListener('mousemove', function(e) {
             const offset = 10;
             tooltipDiv.style.left = (e.pageX + offset) + 'px';
             tooltipDiv.style.top = (e.pageY + offset) + 'px';
         });
-  
         header.addEventListener('mouseout', function() {
             tooltipDiv.style.display = 'none';
         });
     });
   
-    // Hash-links 툴팁
+    // =====================
+    // 5) 해시 링크( # ) 툴팁
+    // =====================
     document.querySelectorAll('.hash-link').forEach(link => {
         link.addEventListener('mouseover', function() {
             tooltipDiv.textContent = '포트폴리오 둘러보기';
@@ -86,7 +92,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 프로젝트 카드 툴팁
+    // =====================
+    // 6) 프로젝트 카드 툴팁
+    // =====================
     document.querySelectorAll('.project-card a').forEach(card => {
         card.addEventListener('mouseover', function() {
             tooltipDiv.textContent = '자세히 보기';
@@ -102,7 +110,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 이메일 및 버튼 툴팁
+    // =====================
+    // 7) 이메일, 버튼 툴팁
+    // =====================
     document.querySelectorAll('.github-btn, .linkedin-btn').forEach(el => {
         el.addEventListener('mouseover', function() {
             tooltipDiv.textContent = this.getAttribute('data-tooltip') || '이동하기';
@@ -118,7 +128,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 스크롤 이벤트: 상단바가 화면 상단에 있을 때는 숨기고, 스크롤 내리면 나타나도록 함
+    // =====================
+    // 8) 스크롤 이벤트: 상단바 처리. 화면 상단에 있을 때는 숨기고, 스크롤 내리면 나타나도록 함
+    // =====================
     window.addEventListener("scroll", function() {
         const header = document.querySelector("header");
         if (window.scrollY > 0) {
@@ -128,7 +140,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
   
-    // 두 단계 인터랙션: 스크롤 + 모달 열기 (scroll-modal 클래스 적용)
+    // =====================
+    // 9) scroll-modal (두 단계 인터랙션: 스크롤 + 모달 열기 (scroll-modal 클래스 적용))
+    // =====================
     document.querySelectorAll(".scroll-modal").forEach(function(link) {
         link.addEventListener("click", function(e) {
             e.preventDefault();
@@ -149,11 +163,13 @@ document.addEventListener("DOMContentLoaded", function() {
             var modalId = this.getAttribute("data-modal");
             setTimeout(function() {
                 document.getElementById(modalId).style.display = "block";
-            }, 800); // 800ms 지연 (필요에 따라 조정)
+            }, 800);
         });
     });
   
-    // 기존 모달 열기 코드 (프로젝트 카드 클릭 등 다른 open-modal 요소 처리)
+    // =====================
+    // 10) open-modal (프로젝트 카드 등)
+    // =====================
     document.querySelectorAll(".open-modal").forEach(function(btn) {
         btn.addEventListener("click", function() {
             // 만약 해당 요소에 scroll-modal 클래스가 없으면 바로 모달 열기
@@ -164,14 +180,25 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // Modal 닫기 (닫기 버튼 클릭)
-    document.querySelectorAll(".close").forEach(function(btn) {
+    // =====================
+    // 11) 모달 닫기 로직을 함수화
+    // =====================
+    function bindCloseButtons() {
+      document.querySelectorAll(".close").forEach(function(btn) {
         btn.addEventListener("click", function() {
-            this.closest(".modal").style.display = "none";
+          this.closest(".modal").style.display = "none";
         });
-    });
+      });
+    }
   
-    // Modal 닫기 (모달 외부 클릭)
+    // =====================
+    // 12) 초기에 한 번 bindCloseButtons() 호출
+    // =====================
+    bindCloseButtons();
+  
+    // =====================
+    // 13) 모달 바깥 클릭 시 닫기
+    // =====================
     window.addEventListener("click", function(e) {
         document.querySelectorAll(".modal").forEach(function(modal) {
             if (e.target === modal) {
@@ -180,7 +207,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 문의 폼 제출 처리: Firestore에 문의 내용 저장
+    // =====================
+    // 14) 문의 폼 제출 (Firestore에 문의 내용 저장)
+    // =====================
     const inquiryForm = document.querySelector('.inquiry-form');
     inquiryForm.addEventListener('submit', function(e) {
         e.preventDefault();
@@ -204,7 +233,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
   
-    // 함수: 관리자 영역에 문의 목록을 렌더링
+    // =====================
+    // 15) 관리자 문의 목록 렌더링
+    // =====================
     function renderInquiries(snapshot) {
         const adminInquiriesDiv = document.getElementById('admin-inquiries');
         let html = "<h3>Inquiry List</h3>";
@@ -239,7 +270,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
   
-    // 관리자 로그인 및 실시간 구독 시작
+    // =====================
+    // 16) 관리자 로그인 및 실시간 구독
+    // =====================
     document.getElementById('admin-login-btn').addEventListener('click', function() {
         const password = prompt("관리자 비밀번호를 입력하세요:");
         // 데모용 비밀번호 (실제 사용 시 안전한 인증 시스템 필요)
@@ -256,12 +289,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
   
-    // 모달 열림 복원 코드 추가
+    // =====================
+    // 17) 뒤로가기 복원 시 모달 열림 & .close 재바인딩
+    // =====================
     window.addEventListener('pageshow', function() {
       if (localStorage.getItem('openModal') === 'true') {
         document.getElementById('modal-ai-sw').style.display = 'block';
         localStorage.removeItem('openModal');
       }
+      // bfcache 복원 시점에 다시 .close 이벤트 바인딩
+      bindCloseButtons();
     });
+  
   });
   
