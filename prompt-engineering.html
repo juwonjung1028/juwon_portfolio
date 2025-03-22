@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>생성형 AI와 프롬프트 엔지니어링: 이론부터 실무까지</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .uml-education .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* h1과 h2 사이 간격을 넉넉하게 */
+    .uml-education h1 {
+      font-size: 1.8rem;
+      margin-bottom: 60px; /* h1과 h2 사이 여백 크게 확보 */
+      color: #f39c12;
+      line-height: 1.4;
+    }
+
+    .uml-education h2 {
+      font-size: 1.4rem;
+      margin: 30px 0 10px;
+      color: #333;
+      border-left: 4px solid #f39c12;
+      padding-left: 10px;
+    }
+
+    /* h2 바로 뒤에 오는 단락(p) 들여쓰기 */
+    .uml-education h2 + p {
+      margin-left: 20px; 
+    }
+
+    .uml-education p {
+      margin-bottom: 10px;
+    }
+
+    /* 테이블 스타일 */
+    .uml-education .education-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+    .uml-education .education-table th,
+    .uml-education .education-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    /* thead 스타일 */
+    .uml-education .education-table thead {
+      background-color: #f39c12;
+      color: #fff;
+    }
+    .uml-education .education-table thead th {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    /* 짝수행 배경색 */
+    .uml-education .education-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* 반응형 처리 */
+    @media (max-width: 768px) {
+      .uml-education h1 {
+        font-size: 1.3rem;
+      }
+      .uml-education h2 {
+        font-size: 1.15rem;
+      }
+      .uml-education .education-table {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ===================== 열 정렬을 위한 클래스 ===================== */
+    /* 첫 번째 열(1일차/2일차), 두 번째 열(오전/오후), 세 번째 열(시간), 다섯 번째 열(강사)은 가운데 정렬 */
+    .center-col {
+      text-align: center;
+      vertical-align: middle;
+    }
+    /* 네 번째 열(세부내용) */
+    .left-col {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    /* 닫기 버튼 스타일 */
+    .close-btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 8px 16px;
+      background-color: #f39c12;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      border-radius: 4px;
+    }
+    .close-btn:hover {
+      background-color: #e08e0b;
+    }
+  </style>
+</head>
+<body>
+  <section class="uml-education">
+    <div class="container">
+
+      <!-- 메인 제목 -->
+      <h1>생성형 AI와 프롬프트 엔지니어링: 이론부터 실무까지</h1>
+
+      <!-- 1. 교육 개요 -->
+      <h2>1. 교육 개요</h2>
+      <p>
+        &nbsp;&nbsp;본 교육은 Chat GPT를 비롯한 최신 생성형 AI 도구를 활용하여 제안서 작성, PPT 제작 등 업무 효율을 극대화할 수 있는 실전 중심의 과정입니다. AI를 처음 접하는 분들도 쉽게 따라올 수 있도록 설계된 이 교육에서는, 생성형 AI에게 효과적으로 질문하고 원하는 결과를 얻는 기술인 프롬프트 엔지니어링을 체계적으로 배우게 됩니다. 또한, AI 챗봇 등 다양한 도구를 통해 업무 자동화와 콘텐츠 제작을 직접 실습하며, 고급 스킬을 통해 복잡한 실무 과제를 해결하는 방법을 익힙니다. 단순한 이론 교육이 아닌, 즉시 실무에 활용 가능한 AI 기술을 습득하여 업무 방식에 혁신을 가져올 기회를 놓치지 마세요!
+      </p>
+
+      <!-- 2. 교육 내용 -->
+      <h2>2. 교육 내용</h2>
+      <p>
+        1. 프롬프트 엔지니어링의 기초와 사례 학습<br>
+        2. 생성형 AI 모델의 이해와 비교 분석<br>
+        3. AI를 활용한 산업별 트렌드 및 실무 적용<br>
+        4. 고급 프롬프트 엔지니어링 스킬과 품질 개선 방법<br>
+        5. 실무 중심의 고급 AI 활용 실습
+      </p>
+
+      <!-- 3. 교육 대상 -->
+      <h2>3. 교육 대상</h2>
+      <p>
+        1. AI와 생성형 AI(ChatGPT 등)에 관심이 있는 일반인, 직장인, 연구자<br>
+        2. 프롬프트 엔지니어링의 기본 개념부터 고급 스킬까지 배우고자 하는 AI 실무자 및 데이터 엔지니어<br>
+        3. AI Chatbot 활용을 통해 업무 자동화 및 생산성을 높이고자 하는 실무자 및 관리자<br>
+        4. AI 기술을 활용하여 프로세스를 혁신하고자 하는 기획자, 개발자, 디자이너
+      </p>
+
+      <!-- 4. 교육 프로그램 (표) -->
+      <h2>4. 교육 프로그램</h2>
+      <table class="education-table">
+        <thead>
+          <tr>
+            <th colspan="3">일정</th>
+            <th>세부내용</th>
+            <th>강사</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- 1일차 (오전) -->
+          <tr>
+            <!-- 첫 번째 열(1일차) -->
+            <td class="center-col" rowspan="2"><strong>1 일차</strong></td>
+            <!-- 두 번째 열(오전) -->
+            <td class="center-col"><strong>오전<br>(이론 및 질의)</strong></td>
+            <!-- 세 번째 열(시간) -->
+            <td class="center-col">10:00-12:00<br>(2H)</td>
+            <!-- 네 번째 열(세부내용) -->
+            <td class="left-col">
+              <strong>가. 프롬프트 엔지니어링 개념 이해</strong><br>
+              <strong>나. 효과적인 프롬프트 작성법 사례 분석</strong><br>
+              - 잘못된 프롬프트와 개선된 프롬프트 비교<br>
+              <strong>다. 생성형 AI 개념 및 주요 모델 비교</strong><br>
+              - 주요 AI 모델 분석 (ChatGPT, Copilot, Claude 등)<br>
+              - 각 모델의 특성과 활용 사례<br>
+              <strong>라. AI 활용 트렌드와 산업별 적용 사례</strong><br>
+              <strong>마. AI Chat-bot 기본 활용 스킬</strong><br>
+              - 효율적인 질의 기본 작성법
+            </td>
+            <!-- 다섯 번째 열(강사) -->
+            <td class="center-col" rowspan="4">
+              모아소프트 담당 엔지니어<br>
+              (정주원 선임)
+            </td>
+          </tr>
+          <!-- 1일차 (오후) -->
+          <tr>
+            <td class="center-col"><strong>오후<br>(실습 및 질의)</strong></td>
+            <td class="center-col">13:30-16:30<br>(3H)</td>
+            <td class="left-col">
+              <strong>가. AI Chatbot의 실무 적용 전반 개요</strong><br>
+              - 업무 자동화를 위한 Chatbot 활용<br>
+              - 주요 활용 분야 소개 (문서 관리, 이미지 및 콘텐츠 제작 등)<br>
+              <strong>나. AI Chatbot을 활용한 실무 적용</strong><br>
+              - PDF 파일 번역 및 OCR 활용 실습<br>
+              - 이미지 생성 방법과 실무 적용 사례 학습<br>
+              - Youtube 및 동영상 활용 실습
+            </td>
+          </tr>
+
+          <!-- 2일차 (오전) -->
+          <tr>
+            <td class="center-col" rowspan="2"><strong>2 일차</strong></td>
+            <td class="center-col"><strong>오전<br>(이론 및 질의)</strong></td>
+            <td class="center-col">10:00-12:00<br>(2H)</td>
+            <td class="left-col">
+              <strong>가. 고급 프롬프트 엔지니어링 스킬</strong><br>
+              - 고급 프롬프트 작성법 및 커스터마이징 전략<br>
+              - 에러 핸들링 및 결과물 품질 개선 방법
+            </td>
+          </tr>
+          <!-- 2일차 (오후) -->
+          <tr>
+            <td class="center-col"><strong>오후<br>(실습 및 질의)</strong></td>
+            <td class="center-col">13:30-16:30<br>(3H)</td>
+            <td class="left-col">
+              <strong>가. AI Chatbot을 활용한 고급 실무</strong><br>
+              - 템플릿 기반의 PPT 및 문서 생성 실습<br>
+              - 코드 생성 도구를 활용한 코드 작성 및 디버깅 방법 학습
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- 닫기 버튼 -->
+      <div style="text-align: center;">
+        <button class="close-btn" onclick="goBackWithModal()">
+          이 창 닫기
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function goBackWithModal() {
+      // 뒤로가기 전, 모달 열림 상태를 플래그로 저장
+      localStorage.setItem('openModal', 'true');
+      // 이전 페이지로 이동
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
