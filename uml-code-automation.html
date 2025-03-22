@@ -13,16 +13,23 @@
     .uml-education .container {
       width: 90%;
       max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      margin: 150px auto 40px;
+      padding: 0px 20px;
     }
 
     /* h1과 h2 사이 간격을 넉넉하게 */
     .uml-education h1 {
-      font-size: 1.8rem;
-      margin-bottom: 60px; /* h1과 h2 사이 여백 크게 확보 */
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1200px;
+      width: 90%;
+      padding: 40px 20px 0;
+      font-size: 1.8rem; 
       color: #f39c12;
       line-height: 1.4;
+      z-index: 1000;
     }
 
     .uml-education h2 {
@@ -96,17 +103,32 @@
       vertical-align: top;
     }
 
+    /* 버튼을 화면 왼쪽 상단에 고정 */
+    .floating-close-container {
+      position: fixed;    /* 스크롤해도 고정 */
+      top: 0;             /* 화면 맨 위 */
+      left: 0;
+      width: 100%;        /* 화면 전체 가로 폭 */
+      height: clamp(50px, 5vh, 90px);
+      z-index: 9999;      /* 최상단에 표시 */
+      display: flex;      /* 버튼을 수평으로 배치하기 위해 flex 사용 */
+      align-items: flex-start;/* 아이템을 상단에 정렬(패딩으로 미세 조정 가능) */
+      padding-top: 20px;      /* 상단 여백 */
+      padding-bottom: 60px;
+      background-color: #fff;
+    }
+
     /* 닫기 버튼 스타일 */
     .close-btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 8px 16px;
+      padding: 0.5em 1em;
       background-color: #f39c12;
       color: #fff;
       border: none;
       cursor: pointer;
-      font-size: 0.9rem;
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
       border-radius: 4px;
+      transition: background 0.3s ease;
     }
     .close-btn:hover {
       background-color: #e08e0b;
@@ -115,10 +137,15 @@
 </head>
 <body>
   <section class="uml-education">
-    <div class="container">
+    <!-- 닫기 버튼 -->
+    <div class="floating-close-container">
+        <button class="close-btn" onclick="goBackWithModal()">
+            <strong>〈〈</strong> &nbsp;&nbsp;페이지 닫기
+        </button>
       <!-- 메인 제목 -->
       <h1>AI 도구를 활용한 UML 설계 및 코드 자동화</h1>
-
+    </div>
+    <div class="container">
       <!-- 1. 교육 개요 -->
       <h2>1. 교육 개요</h2>
       <p>
@@ -212,12 +239,6 @@
           </tr>
         </tbody>
       </table>
-      <!-- 닫기 버튼 -->
-      <div style="text-align: center;">
-        <button class="close-btn" onclick="goBackWithModal()">
-          이 창 닫기
-        </button>
-      </div>
     </div>
   </section>
 
