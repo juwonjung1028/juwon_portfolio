@@ -216,11 +216,11 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   
-    // 모달 외부 터치 시 닫기 (모바일)
+    // 모달 내부 클릭 시 이벤트 전파 막기
     document.querySelectorAll(".modal-content").forEach(function(content) {
       content.addEventListener("click", function(e) {
         e.stopPropagation();
-        }
+      });
     });
   
     // =====================
