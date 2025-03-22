@@ -732,6 +732,16 @@ footer {
 /* 반응형 */
 @media (max-width: 768px) {
 
+  header {
+    position: relative; /* 자식의 absolute 위치 기준 */
+  }
+  .menu-toggle {
+    position: absolute;
+    right: 15px; /* 원하는 오른쪽 간격 (필요 시 0으로 조정 가능) */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .hero-content h1 {
       font-size: 2.5rem;
     }
@@ -773,5 +783,11 @@ footer {
   }
   .hero-content p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-tooltip {
+      display: none !important;
   }
 }
