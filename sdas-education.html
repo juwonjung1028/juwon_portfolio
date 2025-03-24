@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MOA SDAS로 배우는 실습 중심의 무기체계 SW 개발 프로세스</title>
+  <style>
+    html, body {
+      min-width: 480px;
+    }    
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .uml-education .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 210px auto 40px;
+      padding: 0px 20px;
+    }
+
+    /* h1과 h2 사이 간격을 넉넉하게 */
+    .uml-education h1 {
+      position: fixed;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 1200px;
+      width: 90%;
+      padding: 40px 20px 0;
+      font-size: 1.8rem; 
+      color: #f39c12;
+      line-height: 1.4;
+      z-index: 1000;
+    }
+
+    .uml-education h2 {
+      font-size: 1.4rem;
+      margin: 30px 0 10px;
+      color: #333;
+      border-left: 4px solid #f39c12;
+      padding-left: 10px;
+    }
+
+    /* h2 바로 뒤에 오는 단락(p) 들여쓰기 */
+    .uml-education h2 + p {
+      margin-left: 20px; 
+    }
+
+    .uml-education p {
+      margin-bottom: 10px;
+    }
+
+    /* 테이블 스타일 */
+    .uml-education .education-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 0.95rem;
+    }
+    .uml-education .education-table th,
+    .uml-education .education-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    /* thead 스타일 */
+    .uml-education .education-table thead {
+      background-color: #f39c12;
+      color: #fff;
+    }
+    .uml-education .education-table thead th {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    /* 짝수행 배경색 */
+    .uml-education .education-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* 반응형 처리 */
+    @media (max-width: 768px) {
+      .uml-education h1 {
+        font-size: 1.3rem;
+      }
+      .uml-education h2 {
+        font-size: 1.15rem;
+      }
+      .uml-education .education-table {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ===================== 열 정렬을 위한 클래스 ===================== */
+    /* 첫 번째 열(1일차/2일차), 두 번째 열(오전/오후), 세 번째 열(시간), 다섯 번째 열(강사)은 가운데 정렬 */
+    .center-col {
+      text-align: center;
+      vertical-align: middle;
+    }
+    /* 네 번째 열(세부내용) */
+    .left-col {
+      text-align: left;
+      vertical-align: top;
+    }
+
+    /* 버튼을 화면 왼쪽 상단에 고정 */
+    .floating-close-container {
+      position: fixed;    /* 스크롤해도 고정 */
+      top: 0;             /* 화면 맨 위 */
+      left: 0;
+      width: 100%;        /* 화면 전체 가로 폭 */
+      height: clamp(50px, 5vh, 90px);
+      z-index: 9999;      /* 최상단에 표시 */
+      display: flex;      /* 버튼을 수평으로 배치하기 위해 flex 사용 */
+      align-items: flex-start;/* 아이템을 상단에 정렬(패딩으로 미세 조정 가능) */
+      padding-top: 20px;      /* 상단 여백 */
+      padding-bottom: 80px;
+      background-color: #fff;
+    }
+
+    /* 닫기 버튼 스타일 */
+    .close-btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      background-color: #f39c12;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: clamp(0.8rem, 2vw, 1.2rem);
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .close-btn:hover {
+      background-color: #e08e0b;
+    }
+  </style>
+</head>
+<body>
+  <section class="uml-education">
+    <!-- 닫기 버튼 -->
+    <div class="floating-close-container">
+        <button class="close-btn" onclick="goBackWithModal()">
+            <strong>〈〈</strong> &nbsp;&nbsp;페이지 닫기
+        </button>
+        <!-- 메인 제목 -->
+        <h1>MOA SDAS로 배우는 실습 중심의 무기체계 SW 개발 프로세스</h1>
+    </div>
+    <div class="container">
+      <!-- 1. 교육 개요 -->
+      <h2>1. 교육 개요</h2>
+      <p>
+        &nbsp;&nbsp;본 교육은 방위사업청 매뉴얼에 기반하여 무기체계 소프트웨어 개발을 효율적으로 지원하는 ALM 솔루션의 활용 방법을 익히는 과정입니다.
+        참석자들은 산출물 관리, 요구사항 관리, 시험 관리, 품질 관리, 형상 관리 등 주요 기능을 실습하며, 무기체계 소프트웨어 개발 프로세스의 핵심을 이해하고 이를 실무에 적용할 수 있는 능력을 배양합니다.
+      </p>
+
+      <!-- 2. 교육 내용 -->
+      <h2>2. 교육 내용</h2>
+      <p>
+        1. 방위사업청 매뉴얼 기반 소프트웨어 개발 프로세스 이해<br>
+        2. MOA SDAS 주요 기능 실습<br>
+        3. 효율적인 프로젝트 관리 기법 습득<br>
+        4. 산출물 작성 및 품질 검증 프로세스 학습
+      </p>
+
+      <!-- 3. 교육 대상 -->
+      <h2>3. 교육 대상</h2>
+      <p>
+        1. 방산/항공 소프트웨어 개발자<br>
+        2. 소프트웨어 개발 관리자 및 PM<br>
+        3. 방위산업 공공기관 및 연구소 관계자<br>
+        4. 소프트웨어 품질 및 신뢰성 업무 종사자<br>
+        5. 방위산업 진입을 준비하는 스타트업 관계자
+      </p>
+
+      <!-- 4. 교육 프로그램 (표) -->
+      <h2>4. 교육 프로그램</h2>
+      <table class="education-table">
+        <thead>
+          <tr>
+            <th colspan="3">일정</th>
+            <th>세부내용</th>
+            <th>강사</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- 첫 번째 열(일차차) -->
+            <td class="center-col" rowspan="7"><strong>1 일차</strong></td>
+            <!-- 두 번째 열(오전) -->
+            <td class="center-col" rowspan="4"><strong>오전<br>(이론 및 실습)</strong></td>
+            <!-- 세 번째 열(시간) -->
+            <td class="center-col">09:30-09:50<br>(20M)</td>
+            <!-- 네 번째 열(세부내용) -->
+            <td class="left-col">
+              <strong>가. Introduction</strong><br>
+              - 무기체계 소프트웨어 개발 관련 정책<br>  
+              - 소프트웨어 개발 트랜드     
+            </td>
+            <!-- 다섯 번째 열(강사) -->
+            <td class="center-col">모아소프트 류인수 연구소장</td>
+          </tr>
+          <tr>
+            <td class="center-col">09:50-10:30<br>(40M)</td>
+            <td class="left-col">
+              <strong>나. MOA SDAS 소개 및 주요 기능 설명</strong><br>
+              - MOA SDAS 프로그램 소개​<br>
+              - MOA SDAS 주요 기능<br>
+              - 무기체계 개발 프로세스 설명<br>
+              - MOA SDAS의 무기체계 SW 개발 프로세스
+            </td>
+            <td class="center-col">모아소프트 담당 엔지니어<br>(이지현 책임)</td>
+          </tr>
+          <tr>
+            <td class="center-col">10:40-11:20<br>(40M)</td>
+            <td class="left-col">
+              <strong>다. 프로젝트 생성 / 회원가입 / 대시보드 실습</strong>
+            </td>
+            <td class="center-col" rowspan="5">모아소프트 담당 엔지니어<br>(SW 개발팀, 이지현 책임)</td>
+          </tr>
+          <tr>
+            <td class="center-col">11:20-12:00<br>(40M)</td>
+            <td class="left-col">
+              <strong>라. 산출물 테일러링 / SDP 생성 / 요구사항 편집​ 실습</strong></td>
+          </tr>
+          <!-- 1일차 (오후) -->
+          <tr>
+            <td class="center-col" rowspan="3"><strong>오후<br>(실습 및 질의)</strong></td>
+            <td class="center-col">13:10-14:00<br>(50M)</td>
+            <td class="left-col">
+              <strong>마. SRS, SDD 생성 + 형상관리/품질관리 ​실습</strong></td>
+          </tr>
+          <tr>
+            <td class="center-col">14:10-15:00<br>(50M)</td>
+            <td class="left-col">
+              <strong>바. 신뢰성 시험 계획 조회, STP. STD 작성 + 형상관리/품질관리 ​실습</strong></td>
+          </tr>
+          <tr>
+            <td class="center-col">15:10-16:00<br>(50M)</td>
+            <td class="left-col">
+              <strong>사. 시험 수행 기록, STR. SPS 작성 + 형상관리/품질관리 ​실습</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 5. 교육 만족도 결과 -->
+      <h2>5. 교육 만족도 결과</h2>
+      <div class="subsection">
+        <p><strong>2025년</strong></p>
+        <ul>
+          <li><strong>2025.02.07: </strong>★★★★★(5점/5점)</li>
+          <li><strong>2025.05.23: </strong>(TBD)</li>
+          <li><strong>2025.08.28: </strong>(TBD)</li>
+          <li><strong>2025.11.14: </strong>(TBD)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function goBackWithModal() {
+      // 뒤로가기 전, 모달 열림 상태를 플래그로 저장
+      localStorage.setItem('openModal', 'true');
+      // 이전 페이지로 이동
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
