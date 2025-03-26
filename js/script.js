@@ -324,5 +324,30 @@ document.addEventListener("DOMContentLoaded", function() {
       bindCloseButtons();
     });
   
+    // 이미지 확대 기능
+    const images = document.querySelectorAll('.project-outcomes img');
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('expandedImg');
+    const captionText = document.getElementById('imgCaption');
+    const closeBtn = document.querySelector('.close-img');
+  
+    images.forEach(img => {
+      img.style.cursor = 'pointer'; // 마우스 포인터 변경
+      img.onclick = function() {
+      modal.style.display = 'block';
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt; // 이미지 alt 텍스트를 캡션으로 사용
+      };
+    });
+  
+    closeBtn.onclick = function() {
+      modal.style.display = 'none';
+    };
+  
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+      modal.style.display = 'none';
+      }
+    };
   });
   
