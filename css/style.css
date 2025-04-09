@@ -330,13 +330,13 @@ opacity: 0.8;
 }
 
 .modal-content {
-background-color: #fff;
-margin: 10% auto;
-padding: 20px;
-border-radius: 8px;
-max-width: 600px;
-position: relative;
-animation: fadeIn 0.3s;
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px; /* 데스크탑에서는 800px */
+  position: relative;
+  animation: fadeIn 0.3s;
 }
 
 .modal-header h3 {
@@ -938,7 +938,7 @@ footer {
     width: 90%;      /* 모바일에서 폭 줄이기 */
     margin: 40px auto; /* 상단 여백 조정 */
     padding: 20px;   /* 내부 여백 */
-    position: relative;
+    max-width: 80%; /* 모바일에서는 화면의 80%를 사용 */
   }
 
   /* 닫기 버튼 위치 조정 */
