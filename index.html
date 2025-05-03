@@ -13,7 +13,7 @@
     (function() {
       if (localStorage.getItem('openModal') === 'true') {
         // 모달을 강제로 display:block 하도록 스타일 삽입
-        document.write('<style>#modal-ai-sw { display: block; }</style>');
+        document.write('<style>#modal-ai-sw { display: flex; }</style>');
         // 플래그 제거 (중복 실행 방지)
         localStorage.removeItem('openModal');
       }
@@ -239,7 +239,7 @@
         <h3>광운대학교 <span>(2023.09.01 – 현재)</span></h3>
         <p>석사 과정 중 | 전공: 방산AI로봇융합학</p>
         <ul>
-            <li>졸업논문: (예정) DistilBERT를 활용한 생성형 AI 프롬프트에서의 소스코드 민감 키워드 유출 사전 예방 방안</li>
+            <li>졸업논문: (예정) 생성형 AI 기밀 정보 사전 탐지·차단용 DistilBERT 하이브리드 시스템 연구</li>
             <li>졸업작품: DistilBERT 기반 소스 코드 개인 정보 보호 및 보안 취약점 동적 탐지 솔루션</li>
             <li>GPA: 4.5 / 4.5 (총 39학점 이수)</li>
         </ul>
@@ -484,17 +484,16 @@
         <li><strong>기여도: </strong>90% (전체 참여 인원: 2명)</li>
         <p><strong>👨‍💻 담당 업무: </strong>데이터 전처리와 Transformer 기반의 하이브리드 자연어 처리 모델 개발을 통해 지능형 시험 자동화 도구(IAT)를 개발.</p>
         <p><strong>👨 소감: </strong>본 프로젝트에서는 KAI로부터 제공받은 시험 절차서(Word 형식)와 시험 스크립트(XML 형식)를 학습 데이터로 활용하였습니다. 그러나 데이터의 양이 매우 제한적이었고, 시험 절차서가 비정형적인 Word 파일 형태로 구성되어 있어 텍스트를 정제하고 추출하는 데 큰 어려움이 있었습니다. 특히, 시험 절차서와 스크립트 간 정합성이 맞지 않아 기존 IAT 프로그램의 동작을 직접 파악한 후, 대부분의 스크립트를 새롭게 생성해야 했습니다.<br>또한, 제공된 데이터는 보안상의 이유로 많은 단어가 히든 처리되어 있어 단독으로는 의미를 파악하기 어려웠고, 이를 극복하기 위해 수차례의 화상 및 대면 회의를 통해 프로그램의 구조와 의도를 파악해야 했습니다. 데이터 정제와 학습용 데이터셋 구축을 하면서, AI 학습에 있어 양질의 데이터가 얼마나 중요한지, 그리고 원시 데이터를 구조화하고 의미 있는 형태로 가공하는 과정이 얼마나 까다롭고 섬세한 작업인지를 깊이 체감할 수 있었습니다. 이 경험은 데이터 전처리 및 구축 역량뿐만 아니라 문제 해결력과 끈기를 기를 수 있는 소중한 기회가 되었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>TBD</li>
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>TBD</li>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -519,23 +518,23 @@
         </p>
         <p><strong>👨 소감: </strong>해당 프로젝트는 기획부터 설계, 개발까지 모든 과정을 스스로 수행해야 했기에 여러 측면에서 어려움이 많았습니다. 특히 회사 내에서도 단독으로 진행하는 성격의 업무였기 때문에, 프로젝트의 중요성이나 진행 상황, 결과물이 조직 내 윗분들에게 효과적으로 전달되기 어려웠고, 이로 인해 프로젝트 집중이 어려운 환경이었습니다. 프로젝트 수행 도중 다른 업무 지원 요청이 반복적으로 발생하여, 독립적인 연구 개발에 집중하기가 쉽지 않았습니다.
         <br>그럼에도 불구하고, 사회가 필요로 하는 제품이나 기술을 스스로 기획하고, SLM 수준의 딥러닝 모델을 직접 개발해보는 과정을 통해 논문 주제 선정, 제안서 작성 및 지원 전략, 딥러닝 개발 프로세스의 전반적인 흐름을 체계적으로 익힐 수 있었으며, 실력의 큰 도약을 이룰 수 있었습니다. 특히 보안 분야의 데이터 확보가 매우 어려운 현실 속에서, ChatGPT를 활용하여 데이터를 생성하고 가공하는 실험을 진행하며, 새로운 아이디어와 가능성을 발견할 수 있었던 점은 이 프로젝트의 또 다른 중요한 성과였습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>광운대학교 캡스톤디자인 최우수작 선정: <a href="link/gpt-project-outcomes/gpt-project-outcome-capstone.pdf" target="_blank">포스터 보기</a></li>
-            <li>GPT 보안 이슈 해소 방안</li>
-            <img class="zoomable" src="img/project_outcome_img/gpt_outcome1.jpg" alt="GPT 보안 이슈 해소 방안 예시 화면">
-            <li>시스템 구조도</li>
-            <img class="zoomable" src="img/project_outcome_img/gpt_outcome2.jpg" alt="시스템 구조도 예시 화면">
-            <li>WBS(Work Breakdown Structure)</li>
-            <img class="zoomable" src="img/project_outcome_img/gpt_outcome3.jpg" alt="WBS(Work Breakdown Structure) 예시 화면">
+      
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>광운대학교 캡스톤디자인 최우수작 선정: <a href="link/gpt-project-outcomes/gpt-project-outcome-capstone.pdf" target="_blank">포스터 보기</a></li>
+              <li>GPT 보안 이슈 해소 방안</li>
+              <img class="zoomable" src="img/project_outcome_img/gpt_outcome1.jpg" alt="GPT 보안 이슈 해소 방안 예시 화면">
+              <li>시스템 구조도</li>
+              <img class="zoomable" src="img/project_outcome_img/gpt_outcome2.jpg" alt="시스템 구조도 예시 화면">
+              <li>WBS(Work Breakdown Structure)</li>
+              <img class="zoomable" src="img/project_outcome_img/gpt_outcome3.jpg" alt="WBS(Work Breakdown Structure) 예시 화면">
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -560,21 +559,21 @@
         <p><strong>👨 소감: </strong>이 프로젝트는 제게 가장 도전적이었던 경험 중 하나였습니다. 대규모 데이터베이스(DB) 설계를 처음 맡게 되면서, 사용자 권한 체계를 어떻게 정의할지, 일시적으로 생성되었다가 사라지는 데이터를 어떻게 처리할지, 그리고 다양한 외부 환경과의 연동 시 어떤 방식으로 대응해야 하는지 등 많은 실무적 고민과 학습이 필요했습니다. 대규모 DB 설계에 대한 실질적인 자료가 많지 않아, 여러 기술 블로그에서 기본적인 아이디어를 참고하고 이를 실제 상황에 맞게 응용하여 구조를 설계하였습니다.
         <br>프로젝트에서 가장 어려웠던 부분은 UI 기획자 및 백엔드 개발자와의 협업 문제였습니다. UI 기획은 사용자 경험과 프로그램의 기능적 연계가 중요하지만, 처음 설계된 UI는 이러한 요소들을 충분히 고려하지 못해 잦은 마찰이 있었습니다. 이에 직접 UI 구조를 하나하나 설계하고 설명하며 협업의 기반을 마련하였고, 결과적으로 UI 기획 문제를 원활히 해결할 수 있었습니다.
         <br>또한 백엔드 개발자와의 협업 과정에서는 반복적으로 DB 설계상의 문제를 지적받았지만, 실제로는 DB 구조에 대한 이해 부족이나 개발 언어 특성상 공식적으로 지원되지 않는 기능에서 발생한 충돌 문제가 주요 원인이었습니다. 저는 문제 발생의 원인을 정확히 분석하고, DB 구조나 데이터 타입 등 수정이 가능한 부분은 유연하게 개선하여 시스템 전체의 안정성을 확보하였습니다. 이 과정에서 갈등을 조율하고 기술적 문제를 해결해 나가는 실질적인 협업 역량과 문제 해결 능력을 키울 수 있었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>MOA SDAS 프로그램 Pamphlet: <a href="link/sdas-project-outcomes/sdas_pamphlet.pdf" target="_blank">Pamphlet 보기</a></li>
-            <li>산업체 발표 논문: <a href="link/paper/alm_paper.pdf" target="_blank">신뢰도 예측 기능을 통합한 국방무기체계 SW ALM 도구 설계와 구현(2025, KSCE)</a></li>
-            <li>저작권 등록증: <a href="link/copyright/sdas_copyright.pdf" target="_blank">MOA SDAS(모아에스다스)(MOASOFT Software Development Assistance System)</a></li>
-            <li>DB 설계 ERD 예시</li>
-            <img src="img/project_outcome_img/sdas_outcome1.png" alt="postgreSQL ERD 예시 화면">
+      
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>MOA SDAS 프로그램 Pamphlet: <a href="link/sdas-project-outcomes/sdas_pamphlet.pdf" target="_blank">Pamphlet 보기</a></li>
+              <li>산업체 발표 논문: <a href="link/paper/alm_paper.pdf" target="_blank">신뢰도 예측 기능을 통합한 국방무기체계 SW ALM 도구 설계와 구현(2025, KSCE)</a></li>
+              <li>저작권 등록증: <a href="link/copyright/sdas_copyright.pdf" target="_blank">MOA SDAS(모아에스다스)(MOASOFT Software Development Assistance System)</a></li>
+              <li>DB 설계 ERD 예시</li>
+              <img src="img/project_outcome_img/sdas_outcome1.png" alt="postgreSQL ERD 예시 화면">
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -601,21 +600,20 @@
         <p><strong>👨 소감: </strong>프로젝트 초기에는 데이터베이스가 PostgreSQL, MariaDB, MongoDB 등으로 여러 차례 변경되며 설계 방향에 혼선이 발생하였습니다. 이를 해결하기 위해 유스케이스를 직접 그려가며 프로그램의 전반적인 기능에 대한 팀원 간 합의를 이끌어냈고, 기능별로 역할을 나누어 효율적으로 DB를 재설계하였습니다. 다양한 환경에서의 DB 구조를 경험하며, 각각의 DBMS 특성과 설계 전략에 대한 실무 감각을 쌓을 수 있었습니다.
         <br>또한 해당 프로젝트에서는 신뢰성 예측을 위한 딥러닝 모델을 개발하였으며, 시험 시간에 따라 결함 데이터의 증가 경향이 존재한다는 점을 고려하여, 예측 성능을 시간 구간별로 나누어 비교하는 분석 기법을 논문에 반영하였습니다. 이는 기존 분석 방식과 차별화된 접근으로, 학술적 기여도를 높일 수 있었습니다.
         <br>해당 연구 성과는 국제 학회 논문으로 채택되어 발표 기회를 얻었지만, 예산이 갑작스럽게 축소되었고, 회사의 요청으로 기존 예산도 타 부서로 전환되는 상황이 발생했습니다. 그럼에도 연구에 대한 깊은 책임감과 학문적 열정을 바탕으로 현지 교통비를 제외한 모든 비용을 사비로 부담하며 호주 현지에 직접 참석, 논문을 성공적으로 발표하고 돌아왔습니다. 이 경험을 통해 연구자로서의 책임감과 독립적 실행력, 그리고 끝까지 결과를 완수하는 끈기를 스스로 증명할 수 있었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>KCI 연구 논문: 머신러닝 기반의 소프트웨어 신뢰성 성장 모델(SRGM) 최적화에 관한 연구(진행중)</li>
-            <li>KCI 발표 논문: <a href="link/paper/srgm_paper.pdf" target="_blank">AI 최적화 알고리즘을 활용한 소프트웨어 신뢰성 성장 모델(SRGM) 파라미터 추정 개선: 다중 알고리즘 비교 분석(2024, KIMST)</a></li>
-            <li>호주 학회 발표 논문: <a href="link/paper/ict_aes_paper.pdf" target="_blank">Optimized Long Short-Term Memory Deep Learning Approach for Precise Software Reliability Fault Estimation(2025, ICAEIC-2025)</a></li>
-            <li>LSTM 기반 SW 신뢰성 결함 예측 모델 성능</li>
-            <img src="img/project_outcome_img/airamp_outcome1.png" alt="LSTM 기반 SW 신뢰성 결함 예측 모델 성능 그래프">
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>KCI 연구 논문: 머신러닝 기반의 소프트웨어 신뢰성 성장 모델(SRGM) 최적화에 관한 연구(진행중)</li>
+              <li>KCI 발표 논문: <a href="link/paper/srgm_paper.pdf" target="_blank">AI 최적화 알고리즘을 활용한 소프트웨어 신뢰성 성장 모델(SRGM) 파라미터 추정 개선: 다중 알고리즘 비교 분석(2024, KIMST)</a></li>
+              <li>호주 학회 발표 논문: <a href="link/paper/ict_aes_paper.pdf" target="_blank">Optimized Long Short-Term Memory Deep Learning Approach for Precise Software Reliability Fault Estimation(2025, ICAEIC-2025)</a></li>
+              <li>LSTM 기반 SW 신뢰성 결함 예측 모델 성능</li>
+              <img src="img/project_outcome_img/airamp_outcome1.png" alt="LSTM 기반 SW 신뢰성 결함 예측 모델 성능 그래프">
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -638,24 +636,24 @@
         <p><strong>👨 소감: </strong>보안 분야를 처음 접하면서, 타이포스쿼팅(Typosquatting) 등 도메인 기반의 침입 및 해킹 기법에 대해 폭넓게 학습할 수 있었습니다. 특히, 악성코드가 대량의 도메인을 자동 생성하여 위협을 가하는 DGA(Domain Generation Algorithm) 기법을 알게 되면서, 이를 역이용해 AI 기반으로 랜덤 생성되는 유사 도메인을 탐지하는 모델을 개발하자는 아이디어를 떠올렸고, 이를 바탕으로 실제 모델을 구현하게 되었습니다.
         <br>당시 시계열 텍스트 처리에 특화된 LSTM(Long Short-Term Memory) 모델의 구조를 연구하고 이를 적용하여 DGA 탐지 모델을 완성하였으며, 해당 연구는 융합보안학회 학술지에 게재되었습니다. 이 과정에서 공식적인 AI 평가 기준이 부재한 현실 속에서, 외부 보안 전문가들의 정성적 검토와 피드백이 가장 현실적인 검증 수단임을 인식하고, 실질적인 평가와 개선을 거쳐 모델의 완성도를 높였습니다.
         <br>특히 해당 프로젝트는 모아소프트 내에서 단독으로 수행한 프로젝트로, 주관 업체와의 회의, 업무 조율, 문서 작성 등 전반적인 진행을 혼자 도맡아 처리해야 했기 때문에 업무량이 상당히 많아 버거움을 느끼기도 했습니다. 그러나 이러한 경험을 통해 실무에서의 책임감 있는 업무 수행과 문제 해결 능력, 그리고 연구 성과를 외부에 공신력 있게 전달하는 과정까지 폭넓게 경험할 수 있었습니다. 첫 논문 게재를 통해 AI 기술의 보안 분야 응용 가능성을 실감하였으며, 연구자로서의 성장을 위한 소중한 기반을 다질 수 있었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>KCI 논문: <a href="link/paper/lstm_paper.pdf" target="_blank">인간의 습관적 특성을 고려한 악성 도메인 탐지 모델 구축 사례: LSTM 기반 Deep Learning 모델 중심(2023, KMIST)</a></li>
-            <li>취약점 AI 분석 시퀀스 다이어그램</li>
-            <img src="img/project_outcome_img/aispera_outcome1.png" alt="AI 취약점 분석 시퀀스 다이어그램">
-            <li>악성 도메인 판별 LSTM 기반 DL 모델 성능</li>
-            <img src="img/project_outcome_img/aispera_outcome2.png" alt="악성 도메인 판단 LSTM 기반 AI 모델 성능 그래프">
-            <li>AI 전문가 평가서: <a href="link/aispera-project-outcomes/aispera_ai_expert_evaluation_report.pdf" target="_blank">보기</a></li>
-            <li>저작권 등록증: <a href="link/copyright/lstm_copyright.pdf" target="_blank">LSTM(엘에스티엠) 모델 기반 AI(에이아이) 악성 도메인 판별 프로그램</a></li>
-            <li>소프트웨어 등록증: <a href="link/aispera-project-outcomes/aispera_software_registration_certificate.pdf" target="_blank">보기</a></li>            
+
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>KCI 논문: <a href="link/paper/lstm_paper.pdf" target="_blank">인간의 습관적 특성을 고려한 악성 도메인 탐지 모델 구축 사례: LSTM 기반 Deep Learning 모델 중심(2023, KMIST)</a></li>
+              <li>취약점 AI 분석 시퀀스 다이어그램</li>
+              <img src="img/project_outcome_img/aispera_outcome1.png" alt="AI 취약점 분석 시퀀스 다이어그램">
+              <li>악성 도메인 판별 LSTM 기반 DL 모델 성능</li>
+              <img src="img/project_outcome_img/aispera_outcome2.png" alt="악성 도메인 판단 LSTM 기반 AI 모델 성능 그래프">
+              <li>AI 전문가 평가서: <a href="link/aispera-project-outcomes/aispera_ai_expert_evaluation_report.pdf" target="_blank">보기</a></li>
+              <li>저작권 등록증: <a href="link/copyright/lstm_copyright.pdf" target="_blank">LSTM(엘에스티엠) 모델 기반 AI(에이아이) 악성 도메인 판별 프로그램</a></li>
+              <li>소프트웨어 등록증: <a href="link/aispera-project-outcomes/aispera_software_registration_certificate.pdf" target="_blank">보기</a></li>            
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -680,22 +678,21 @@
         <p><strong>👨 소감: </strong>처음으로 AI 프로그램을 개발한 프로젝트였기에, 비록 타이트한 일정 속 매일 야근이 이어졌지만 새로운 기술을 익히고 적용하는 과정 자체가 매우 즐거웠습니다. 초기에는 얼굴의 주요 특징점을 연결하고, 각도를 조정하여 표정 변화나 외부 요인에 영향을 받지 않도록 처리하는 여러 시행착오를 거쳤고, 이를 계기로 YOLO(You Only Look Once) 모델을 알게 되었습니다. 팀원들과 함께 YOLO 모델을 학습하며, AI가 얼굴을 검출하고 인식한 후 학습과 테스트를 거치는 AI 기반 비전 인식 프로세스에 대해 깊이 이해할 수 있었습니다.
         <br>UI 설계는 카카오 오픈 API 등을 활용해 사용자 친화적 구조를 기획하였고, 상용화를 고려하여 코드 공개 의무가 없는 플랫폼을 찾던 중 PyQT를 도입하게 되었습니다. 이를 통해 HTML이나 CSS 기반 개발보다 빠르고 안정적인 UI를 구축할 수 있었고, 개발 효율도 크게 높일 수 있었습니다. DB는 UI와 AI 시스템 구조를 모두 이해한 상태에서 설계에 참여했기 때문에, 실질적인 구현 과정에서는 큰 어려움 없이 개발을 마무리할 수 있었습니다.
         <br>프로젝트 중에는 일학습병행 제도를 통해 단기간 입사한 신입 사원과의 협업도 경험했습니다. 해당 신입은 UI 세부 수정, 코드 분석, 로고 디자인 등 다양한 작업을 배정받았지만, 지속적인 거짓 보고와 무단 결근 등으로 인해 프로젝트에 차질이 생기기도 했습니다. 저는 끝까지 그 신입을 독려하고 함께 협업하려 노력했지만, 결국 팀장님의 지시에 불응하는 상황이 발생하면서 회사 차원에서 퇴사 조치가 내려졌고, 개인적으로는 안타까운 마음이 컸습니다. 이 경험을 통해 기술뿐 아니라 조직 내 책임감, 소통, 인내심의 중요성을 다시금 깨달았으며, 향후 협업 환경에서도 문제를 유연하게 해결하고자 하는 자세를 갖추게 되었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li> AI FARS 얼굴 인식 SW개발 8단계</li>
-            <img src="img/project_outcome_img/aifars_outcome1.png" alt="MOASOFT 얼굴인식 소프트웨어 AI FARS 개요">
-            <li>MOASOFT 얼굴인식 소프트웨어 AI FARS 개요</li>
-            <img src="img/project_outcome_img/aifars_outcome2.png" alt="MOASOFT 얼굴인식 소프트웨어 AI FARS 개요">
-            <li>AI FARS 주요 기능 최종 보고서: <a href="link/aifars-project-outcomes/aifars_final_main_function_report.pdf" target="_blank">보기</a></li>
-            <li>UI/UX 디자인 및 구성: <a href="link/aifars-project-outcomes/aifars_ui&ux.pdf" target="_blank">보기</a></li>
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li> AI FARS 얼굴 인식 SW개발 8단계</li>
+              <img src="img/project_outcome_img/aifars_outcome1.png" alt="MOASOFT 얼굴인식 소프트웨어 AI FARS 개요">
+              <li>MOASOFT 얼굴인식 소프트웨어 AI FARS 개요</li>
+              <img src="img/project_outcome_img/aifars_outcome2.png" alt="MOASOFT 얼굴인식 소프트웨어 AI FARS 개요">
+              <li>AI FARS 주요 기능 최종 보고서: <a href="link/aifars-project-outcomes/aifars_final_main_function_report.pdf" target="_blank">보기</a></li>
+              <li>UI/UX 디자인 및 구성: <a href="link/aifars-project-outcomes/aifars_ui&ux.pdf" target="_blank">보기</a></li>
+            </div>
           </div>
-        </div>
+        </div> 
       </div>
-
     </div>
   </div>
 
@@ -721,19 +718,18 @@
         <p><strong>👨‍💻 담당 업무: </strong>전처리되지 않은 센서 데이터를 정제해 실시간으로 데이터베이스에 자동 입력하는 프로그램을 개발하고, 터베이스 구조를 설계하여 효율적인 데이터 관리 및 분석 환경을 구축. 이를 통해 군사 장비의 성능 유지 및 고장 예측에 필요한 데이터를 제공하고, 전투 시스템의 신뢰성을 높여 프로젝트를 성공적으로 마무리함.<br><br></p>
         <p><strong>👨 소감: </strong>이 프로젝트를 통해 기존에 사용하던 MySQL과는 다른 구조와 철학을 가진 PostgreSQL 데이터베이스를 처음 접하게 되었고, 이를 기반으로 다양한 데이터 처리 방법을 학습할 수 있었습니다. 특히, 엑셀 데이터를 소켓 통신을 통해 실시간으로 PostgreSQL에 자동 입력하는 방법을 구현하면서, 외부 데이터와의 연동 방식에 대한 이해도를 높일 수 있었습니다.
         <br>또한 데이터 대량 처리 측면에서는, 한 번에 다량의 데이터를 효율적으로 처리할 수 있는 YAML 파일 기반의 데이터 일괄 삽입 방식을, 분산 처리에 능한 동료로부터 배우며 실무에 적용해보았습니다. 이 과정은 단순한 DB 입력을 넘어서, 대용량 데이터를 유연하게 설계하고 자동화하는 역량을 키우는 데 큰 도움이 되었고, 실무에서의 협업을 통해 새로운 기술을 받아들이고 성장하는 태도의 중요성을 다시금 깨닫는 계기가 되었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>결과 보고서: <a href="link/kass-project/phm_final_report.pdf" target="_blank">보기</a></li>
-            <!-- <li>phm 성과 예시1</li>
-            <img src="img/project_outcome_img/phm_outcome1.jpg" alt="phm 성과 예시 화면1"> -->
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>결과 보고서: <a href="link/kass-project/phm_final_report.pdf" target="_blank">보기</a></li>
+              <!-- <li>phm 성과 예시1</li>
+              <img src="img/project_outcome_img/phm_outcome1.jpg" alt="phm 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -762,19 +758,18 @@
         <br>설계 변경이 발생할 때마다 관련 문서의 종류는 100건이 넘었고, 그에 따라 모든 문서에 대한 수정 및 추적성 확보 작업이 필수적이었습니다. 이를 위해 DOORS 시스템과 엑셀 기반의 변경 이력 관리를 병행하며 철저한 문서 추적 및 버전 관리를 수행하였습니다. 이 과정에서 무기체계 시스템의 전반적인 개발 프로세스에 대해 깊이 배우게 되었고, KO, PDR, CDR, TDR, FDR, AR 등의 단계별 설계 절차와 함께, baseline을 설정하고 이를 기준으로 변경을 통제하는 방식을 이해하게 되었습니다.
         <br>또한, 24시간 365일 안정적인 운영을 위해 백업 모드를 별도로 구성하고, MCC(Master Control Center)를 이중화하며, 데이터는 일정 주기마다 자동 저장되는 구조로 설계해야 함을 경험을 통해 배웠습니다. 설계는 구조 설계와 기능 설계로 나뉘며, 각 시스템 간의 연결과 데이터 흐름을 정의하는 인터페이스 문서(ICD)의 중요성도 체감할 수 있었습니다. 테스트 단계에서는 유닛 테스트, 기능 테스트, 통합 테스트를 거치며, 테스트 시나리오를 기반으로 각 단계별 pass/fail 결과를 문서화하여 명확한 검증 기준을 세우는 것이 필수적이라는 점도 배웠습니다.
         <br>무엇보다 이 프로젝트를 통해 유럽 항공우주 표준에 따른 시스템 설계 방식과 국제 규격 문서 작성법을 실무에서 직접 익힐 수 있었고, 이는 저의 기술적 역량뿐 아니라 글로벌 기준의 시스템 엔지니어링 이해도를 넓히는 데 큰 자산이 되었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>사업 최종 보고서: <a href="link/kass-project-outcomes/sbas_final_report.pdf" target="_blank">보기</a></li>
-            <!-- <li>kass 성과 예시1</li>
-            <img src="img/project_outcome_img/kass_outcome1.jpg" alt="kass 성과 예시 화면1"> -->
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>사업 최종 보고서: <a href="link/kass-project-outcomes/sbas_final_report.pdf" target="_blank">보기</a></li>
+              <!-- <li>kass 성과 예시1</li>
+              <img src="img/project_outcome_img/kass_outcome1.jpg" alt="kass 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -800,18 +795,17 @@
         <br>당시 저는 주식에 대한 배경지식이 전혀 없는 상태였지만, 프로젝트를 계기로 주식 용어와 시장 구조, 그리고 시계열 데이터의 특성에 대해 실질적으로 학습할 수 있었습니다. 특히, 주식 그래프는 이전 시점의 수치에 따라 다음 데이터가 상대적인 변화율(%)로 표현된다는 점을 이해하게 되었고, 이를 바탕으로 시계열 분석의 기반을 다졌습니다.
         <br>예측 로직 개발 과정에서는 실제로 다음 값을 정확히 예측하는 것이 매우 어려운 작업이라는 현실적인 한계도 체감했습니다. 이에 단순 예측을 넘어, 사용자 입력값에 따라 결과를 시뮬레이션해볼 수 있는 기능을 추가하여, 예측의 신뢰도를 높이고 활용성을 강화하였습니다. 이는 사용자의 가정에 따라 다양한 시나리오 분석이 가능하도록 설계한 점에서 실질적인 의미 있는 개선이었습니다.
         <br>또한 프로젝트 중 C#을 사용해 UI를 구현해야 했지만 당시에는 언어에 대한 경험이 전혀 없었습니다. 그러나 주변의 선배 개발자에게 도움을 요청하며, C# 기반 UI 구현 기법을 단기간에 익히고 실제로 구현에 적용할 수 있었습니다. 이 과정을 통해 낯선 기술 환경에서도 문제를 빠르게 학습하고 실무에 적용하는 적응력과 학습 역량을 키울 수 있었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>약 7%의 단기 수익률 달성</li>
-            <!-- <img src="img/project_outcome_img/hts_outcome1.jpg" alt="hts 성과 예시 화면1"> -->
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>약 7%의 단기 수익률 달성</li>
+              <!-- <img src="img/project_outcome_img/hts_outcome1.jpg" alt="hts 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -837,18 +831,18 @@
         <br>이 과정에서 기존에는 몰랐던 프린트문을 활용한 디버깅 기법을 새롭게 익혔고, 그전까지는 전체 코드를 실행하거나 IDE의 디버거만 사용하는 방식밖에 알지 못했기에, 코드를 직접 탐색하고 논리 흐름을 추적하는 새로운 관점을 배우는 전환점이 되었습니다.
         <br>가장 끝까지 저를 괴롭혔던 오류는 논리적 오류(Logical Error)였습니다. 문법적으로는 아무 문제가 없고, 에러 메시지도 발생하지 않지만 프로그램이 기대한 대로 동작하지 않았습니다. 예를 들어, for문이 반복되어야 할 블록에서 겉보기에는 실행되지 않는 것처럼 보이는 상황이었고, 이에 대해 수많은 시도와 주변의 도움에도 불구하고 해결이 어려웠습니다. 그러나 결국에는 해당 코드 블록을 여러 번 복사해 직접 반복 처리하는 방식으로 단순하지만 효과적인 해결책을 찾았고, 이 경험을 통해 문제를 단순화하고 직관적으로 접근하는 법을 체득할 수 있었습니다.
         <br>결과적으로, 학술제에 1학년으로서는 유일하게 출품한 사례가 되었고, 지도 교수님께서는 “아직 가르쳐주지도 않은 것을 스스로 해낸 점이 인상 깊다”며 큰 칭찬을 아끼지 않으셨습니다. 이후 3학년에 개설되는 데이터베이스 수업을 듣고나서 지금 프로그램을 DB 기반으로 확장하면 더 좋은 시스템이 될 수 있었을 것이라는 피드백도 주셨고, 저는 이를 통해 개발 구조와 확장성에 대한 관점도 함께 키울 수 있었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>대학생들 사이에서 실용성과 효율성 덕분에 인기 프로그램으로 급부상</li>
-            <!-- <img src="img/project_outcome_img/empty-classroom_outcome1.jpg" alt="empty-classroom 성과 예시 화면1"> -->
+
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>대학생들 사이에서 실용성과 효율성 덕분에 인기 프로그램으로 급부상</li>
+              <!-- <img src="img/project_outcome_img/empty-classroom_outcome1.jpg" alt="empty-classroom 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -875,16 +869,17 @@
         <br>전체적인 프로젝트 컨셉과 기능별 흐름, 시스템 간의 로직은 제가 중심이 되어 설계하였으며, 실질적인 구현 단계에서는 각 팀원의 역량을 고려해 역할을 (웹 프론트엔드 구축, UI 구현, DB 개발, DB와 웹 연동)다음과 같이 분담하였습니다.
         <br>팀장으로서의 가장 중요한 역할은 기획과 조율, 그리고 전체 일정과 품질의 균형을 유지하는 것이라고 생각했습니다. 각자의 역할이 명확하게 정리되자 팀원들 모두가 책임감을 가지고 적극적으로 참여해주었고, 팀원 간의 원활한 소통과 협업을 통해 프로젝트를 성공적으로 마무리할 수 있었습니다.
         <br>이 경험을 통해 저는 단순한 프로그래밍 역량을 넘어, 프로젝트를 기획하고 추진하며, 사람들과 함께 완성도 높은 결과를 만드는 리더십과 협업의 중요성을 실감하게 되었습니다. 특히 기술적인 지식 외에도 실제 서비스를 위한 운영적 요소까지 고려해야 한다는 점에서, 한층 더 실무 중심의 사고방식을 갖추게 된 계기가 되었습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>대학교 1학년 데이터베이스 수업에서 A+ 취득</li>
-            <!-- <img src="img/project_outcome_img/univ-management_outcome1.jpg" alt="univ-management 성과 예시 화면1"> -->
+      
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>대학교 1학년 데이터베이스 수업에서 A+ 취득</li>
+              <!-- <img src="img/project_outcome_img/univ-management_outcome1.jpg" alt="univ-management 성과 예시 화면1"> -->
+            </div>
           </div>
-        </div>
+        </div>      
       </div>
     </div>
   </div>
@@ -913,14 +908,14 @@
         <br>최종 평가는 사각형의 바닥 위에 장애물을 배치하고, 로봇이 영역을 벗어나지 않으면서 장애물을 모두 치우는지를 기준으로 진행되었습니다. 수많은 시행착오와 밤샘 작업 끝에, 로봇이 안정적으로 주행하며 모든 장애물을 처리하고 구역을 벗어나지 않는 완성도 높은 결과를 도출해 프로젝트를 성공적으로 마무리할 수 있었습니다.
         <br>또한 프로젝트를 이끌며, 팀원 간 역량 차이로 인해 기여도에 불균형이 발생하는 상황을 마주했지만, 단순히 역할을 나누기보다 개발이 어려운 팀원에게는 재료 준비, 실험 보조 등의 적절한 역할을 배분하였고, 최종적으로는 서로의 기여도를 평가해 평균 점수로 제출하는 방식을 도입하여 공정성을 높였습니다.
         <br>이 경험은 저에게 기술적 문제 해결력과 함께, 팀원 간 조율 능력과 실질적인 리더십의 중요성을 깨닫게 해준 소중한 기회였습니다. 나아가 복잡한 문제 상황에서도 끝까지 완성도를 높이기 위한 책임감 있는 자세를 갖출 수 있었던 계기였습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>대학교 1학년 공학설계입문 수업에서 A+ 취득</li>
-            <!-- <img src="img/project_outcome_img/nxt-robot-cleaner_outcome1.jpg" alt="nxt-robot-cleaner 성과 예시 화면1"> -->
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>대학교 1학년 공학설계입문 수업에서 A+ 취득</li>
+              <!-- <img src="img/project_outcome_img/nxt-robot-cleaner_outcome1.jpg" alt="nxt-robot-cleaner 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
@@ -950,14 +945,14 @@
         <br>결과적으로 학생들은 (더 다양한 메뉴 구성, 식사가 가능한 샌드위치류 등의 간편식 확대, 운영 시간의 확대 (특히 6시 이후 시간대), 직원의 친절도 개선)과 같은 개선점을 가장 많이 요구하고 있음을 확인할 수 있었습니다.
         <br>이러한 분석 결과를 기반으로 현 시장 트렌드와 소비자 니즈를 반영한 개선 제안 보고서를 작성하였고, 직접 베이커리 측에 전달하였습니다. 약 3개월 후, 해당 매장으로부터 메뉴 리뉴얼과 운영시간 조정 후 매출이 약 20% 증가했다는 피드백과 함께 감사 인사를 받게 되었고, 실제 변화를 유도한 의미 있는 프로젝트가 되었습니다.
         <br>이 경험을 통해 저는 단순한 이론을 넘어, 현장의 목소리를 분석하고 실질적 전략으로 전환하는 능력, 그리고 데이터 기반 마케팅 실무 역량을 기를 수 있었으며, 프로젝트가 현실에 긍정적인 영향을 미칠 수 있다는 점에서 큰 보람을 느꼈습니다.<br><br></p>
-      </div>
-      <!-- 프로젝트 성과 및 결과물 -->
-      <div class="project-outcomes">
-        <h4>✨ 프로젝트 성과 및 결과물</h4>
-        <div class="outcomes-container">
-          <div class="outcome-item">
-            <li>실제 매출 20% 상승 성과 달성</li>
-            <!-- <img src="img/project_outcome_img/bakery-market-analysis_outcome1.jpg" alt="bakery-market-analysis 성과 예시 화면1"> -->
+        <!-- 프로젝트 성과 및 결과물 -->
+        <div class="project-outcomes">
+          <h4>✨ 프로젝트 성과 및 결과물</h4>
+          <div class="outcomes-container">
+            <div class="outcome-item">
+              <li>실제 매출 20% 상승 성과 달성</li>
+              <!-- <img src="img/project_outcome_img/bakery-market-analysis_outcome1.jpg" alt="bakery-market-analysis 성과 예시 화면1"> -->
+            </div>
           </div>
         </div>
       </div>
